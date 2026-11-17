@@ -1,0 +1,130 @@
+{
+  "model": "LogisticRegression",
+  "hyperparameters": {
+    "C": 1,
+    "class_weight": {
+      "0": 1,
+      "1": 4
+    }
+  },
+  "trained_on": "2026-11-17",
+  "train_rows": 9849,
+  "input_columns": [
+    "id_unit",
+    "ts_cycle",
+    "motorCurrent",
+    "filter_dp",
+    "oilTemperature",
+    "pressure_reservoir",
+    "pressure_working",
+    "pressureOil",
+    "vibrationRms",
+    "flowmeter",
+    "intake_humidity",
+    "ambientNoise",
+    "bearingTemp",
+    "filter_dp_missing",
+    "vibrationRms_missing",
+    "id_unit_key",
+    "Manufacturer",
+    "class_duty",
+    "lastOverhaul",
+    "lineCode",
+    "id_depot",
+    "hoursService",
+    "gatewayId",
+    "vendor",
+    "seen_last",
+    "versionFirmware",
+    "modelHardware",
+    "dbm_signal",
+    "date_install"
+  ],
+  "selected_features": [
+    "skew__filter_dp",
+    "skew__hoursService",
+    "bin__filter_dp_missing",
+    "bin__vibrationRms_missing",
+    "num__motorCurrent_rel",
+    "num__bearingTemp",
+    "skew__vibrationRms",
+    "num__pressure_reservoir",
+    "ord__class_duty",
+    "cat__versionFirmware_v3.4.1"
+  ],
+  "motorCurrent_median_by_class_duty": {
+    "1.0": 3.483355,
+    "2.0": 5.5162949999999995,
+    "3.0": 7.49833
+  },
+  "clipping_bounds": {
+    "motorCurrent": [
+      1.6995654,
+      9.076625499999999
+    ],
+    "motorCurrent_rel": [
+      -2.08772155,
+      2.083072349999996
+    ],
+    "oilTemperature": [
+      26.918594,
+      82.28266999999984
+    ],
+    "pressure_reservoir": [
+      7.2681468,
+      10.1242176
+    ],
+    "pressure_working": [
+      7.220248000000001,
+      10.1683348
+    ],
+    "pressureOil": [
+      2.3708552000000003,
+      4.996162400000001
+    ],
+    "flowmeter": [
+      18.5559376,
+      37.24166
+    ],
+    "intake_humidity": [
+      10.9106193,
+      94.1002216
+    ],
+    "ambientNoise": [
+      61.011522799999995,
+      88.72207760000002
+    ],
+    "bearingTemp": [
+      46.4619924,
+      83.88888720000001
+    ],
+    "dbm_signal": [
+      -92.8,
+      -45.5
+    ],
+    "days_since_overhaul": [
+      -566.52,
+      3119.0
+    ],
+    "gateway_age_days": [
+      -577.52,
+      3124.5200000000004
+    ],
+    "days_since_seen": [
+      55.760000000000005,
+      707.0
+    ]
+  },
+  "cv_f1": 0.48786885035195954,
+  "test_metrics": {
+    "accuracy": 0.8578391551584078,
+    "precision": 0.4297520661157025,
+    "recall": 0.5217391304347826,
+    "f1_score": 0.47129909365558914,
+    "roc_auc": 0.8017339351235511
+  },
+  "versions": {
+    "sklearn": "1.9.1",
+    "pandas": "3.0.6"
+  }
+}
